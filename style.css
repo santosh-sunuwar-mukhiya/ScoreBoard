@@ -1,3 +1,9 @@
+*, *:before, *:after
+{
+    margin: 0;
+    padding: 0;
+}
+
 /* =========================================
    Variables & Font Setup
    ========================================= */
@@ -7,4 +13,103 @@
     src: url('./CursedTimerUlil-Aznm.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+/* Typography */
+.board, .btn
+{
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 1rem;
+}
+
+.score {
+    font-size: 1.5rem;
+}
+
+.title {
+    font-size: 1.75rem;
+    margin-bottom: .5em;
+}
+
+/* Buttons */
+.btns{
+    border: 1px solid yellow;
+    padding: .5em;
+    display: block;
+}
+.btn {
+    padding: .5em;
+    margin-left: .5em;
+}
+
+.three {
+    margin-top: .5em;
+}
+
+/* Layouts */
+.container
+{
+    background-color: #1B244A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 2em auto 0;
+    padding: 2em 0;
+    color: #fff;
+    gap: 1em;
+}
+
+.col {
+    width: 40%;
+    border: 1px solid yellow;
+    text-align: center;
+    padding: 1em 2em;
+}
+
+.board {
+    display: inline-block;
+    padding: .5em;
+    margin-bottom: .5em;
+    background-color: #080001;
+}
+
+.score {
+    border: 1px solid red;
+    display: inline-block;
+    padding: .5em;
+}
+
+@media (min-width: 678px)
+{
+    .container{
+        width: 90%;
+        flex-direction: row;
+        gap: 4em;
+        padding: 4em 8em;
+    }
+
+    .col {
+        width: 45%;
+        padding: 2em 4em;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .score {
+        font-size: 2rem;
+        padding: .5em;
+    }
+
+    .board{
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    .btn{
+        font-size: 2rem;
+    }
 }
