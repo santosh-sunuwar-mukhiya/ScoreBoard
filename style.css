@@ -1,0 +1,10 @@
+/* =========================================
+   Variables & Font Setup
+   ========================================= */
+@font-face {
+    font-family: 'Cursed Timer ULiL';
+    /* Ensure you have the font file in your project folder */
+    src: url('./CursedTimerUlil-Aznm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
