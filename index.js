@@ -6,6 +6,11 @@ let leadScore = document.getElementById("lead-score");
 let hCount = 0;
 let gCount = 0;
 
+if(hCount === 0 && gCount === 0)
+{
+    leadScore.textContent = 0;
+}
+
 function hscoreOne(){
     hCount += 1;
     homeScore.textContent = hCount;
@@ -58,4 +63,5 @@ function newGame()
     hCount = 0;
     guestScore.textContent = gCount;
     homeScore.textContent = hCount;
+    leadScore.textContent = 0;
 }

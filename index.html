@@ -9,29 +9,36 @@
 <body>
     <main>
         <div class="container">
+            <h1>BasketBall Score Board</h1>
             <div class="col">
                 <h2 class="title">Home</h2>
                 <div class="board">
-                    <h2 class="score">0</h2>
+                    <h2 class="score" id="home-score">0</h2>
                 </div>
                 <div class="btns">
-                    <button class="btn one">+1</button>
-                    <button class="btn two">+2</button>
-                    <button class="btn three">+3</button>
+                    <button class="btn home-one" onclick="hscoreOne()">+1</button>
+                    <button class="btn home-two" onclick="hscoreTwo()">+2</button>
+                    <button class="btn three home-three" onclick="hscoreThree()">+3</button>
                 </div>
             </div>
 
             <div class="col">
                 <h2 class="title">Guest</h2>
-                <div class="board">
-                    <h2 class="score">0</h2>
+                <div class="board guest-board">
+                    <h2 class="score" id="guest-score">0</h2>
                 </div>
                 <div class="btns">
-                    <button class="btn one">+1</button>
-                    <button class="btn two">+2</button>
-                    <button class="btn three">+3</button>
+                    <button class="btn guest-one" onclick="gscoreOne()">+1</button>
+                    <button class="btn guest-two" onclick="gscoreTwo()">+2</button>
+                    <button class="btn three guest-three" onclick="gscoreThree()">+3</button>
                 </div>
             </div>
+        </div>
+
+        <div class="col btn-col container">
+                <button id="new-game" class="btn" onclick="newGame()">New Game</button>
+                <button id="leader-board" class="btn" onclick="leadScorer()">Leading Scorer</button>
+                <p id="lead-score"></p>
         </div>
     </main>
     <script src="./index.js"></script>
