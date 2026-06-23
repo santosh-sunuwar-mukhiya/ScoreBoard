@@ -8,7 +8,7 @@ let gCount = 0;
 
 if(hCount === 0 && gCount === 0)
 {
-    leadScore.textContent = 0;
+    leadScore.textContent = 'Score is Zero';
 }
 
 function hscoreOne(){
@@ -63,5 +63,5 @@ function newGame()
     hCount = 0;
     guestScore.textContent = gCount;
     homeScore.textContent = hCount;
-    leadScore.textContent = 0;
+    leadScore.textContent = 'New Game Started';
 }

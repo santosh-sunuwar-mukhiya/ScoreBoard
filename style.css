@@ -19,7 +19,7 @@
 /* Typography */
 h1{
     text-align: center;
-    margin-bottom: .5em;
+    margin: .5em 0;
 }
 .board, .btn
 {
@@ -40,22 +40,22 @@ h1{
     background-color: #080001;
     font-size: 1rem;
     padding: .5em 1em;
+    color: #fff;
 }
 
 /* Buttons */
 .btns{
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     padding: .5em;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
 }
 .btn {
-    padding: .5em;
+    padding: .5em 0;
     margin-left: .5em;
 }
 
-.three {
-    margin-top: .5em;
-}
 
 /* Layouts */
 .container
@@ -65,7 +65,7 @@ h1{
     flex-direction: column;
     align-items: center;
     width: 80%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 2em auto 0;
     padding: 2em 0;
     color: #fff;
@@ -74,7 +74,7 @@ h1{
 
 .col {
     width: 40%;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     text-align: center;
     padding: 1em 2em;
 }
@@ -93,22 +93,41 @@ h1{
 }
 
 .btn-col {
+    width: 40%;
+    margin: 0 auto 1em;
+    border: 1px solid yellow;
     display: grid;
-    grid-auto-columns: auto;
-    margin-bottom: 1em;
+    gap: .5em;
+    grid-auto-columns: 1fr;
+}
+
+#new-game {
+    grid-area: 'neew';
+    background-color: #080001;
+    color: #fff;
+}
+
+#leader-board {
+    grid-area: 'lead';
+    background-color: #080001;
+    color: #fff;
+}
+
+#lead-score {
+    grid-area: 'scor';
 }
 @media (min-width: 678px)
 {
     .container{
         width: 90%;
         flex-direction: row;
-        gap: 4em;
-        padding: 4em 8em;
+        gap: 2em;
+        padding: 2em 4em;
     }
 
     .col {
         width: 45%;
-        padding: 2em 4em;
+        padding: 1em 2em;
     }
 
     .title {
@@ -117,15 +136,31 @@ h1{
 
     .score {
         font-size: 2rem;
-        padding: .5em;
+        padding: .25em;
     }
 
     .board{
-        padding: 1em;
+        padding: .5em;
         margin-bottom: 1em;
     }
 
+    .btns{
+        flex-direction: row-reverse;
+    }
+
     .btn{
-        font-size: 2rem;
+        font-size: 1.75rem;
+        padding: 0 .25em;
+    }
+
+    .btn-col {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "neew lead"
+        "scor scor";
+    }
+
+    #lead-score {
+        grid-column: span 2;
     }
 }
