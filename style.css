@@ -45,7 +45,7 @@ h1{
 
 /* Buttons */
 .btns{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     padding: .5em;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@ h1{
 
 .col {
     width: 40%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     text-align: center;
     padding: 1em 2em;
 }
@@ -95,7 +95,7 @@ h1{
 .btn-col {
     width: 40%;
     margin: 0 auto 1em;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: grid;
     gap: .5em;
     grid-auto-columns: 1fr;
